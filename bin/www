@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+debug = require('debug')('meen-boilerplate')
+app = require '../app'
+
+app.set 'port', process.env.PORT || 4444
+
+server = app.listen(app.get('port'), -> debug('Express server listening on port ' + server.address().port))
